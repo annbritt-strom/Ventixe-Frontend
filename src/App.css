@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+   /* Font family variable */
+   --font-family: "Inter", sans-serif;
+
+   /* Color variables */
+   --secondary-110: #1C2346;
+   --secondary-100: #37437D;
+   --secondary-90: #5562A2;
+   --secondary-70: #707DBF;
+   --secondary-60: #ABB4DD;
+   --secondary-50: #D3DAF9;
+
+   --primary-100: #F26CF9;
+   --primary-90: #F589FA;
+   --primary-50: #FCD3FE;
+   --primary-40: #FCE2FE;
+   --primary-30: #FDEDFE;
+
+   --yellow-100: #FFCA39;
+   --yellow-90: #FFEFC3;
+
+   --grey-10: #FFFFFF;
+   --grey-20: #F7F7F7;
+   --grey-30: #EDEDED;
+   --grey-40: #E0E0E1;
+   --grey-50: #C3C3C4;
+   --grey-60: #9F9FA1;
+   --grey-70: #777779;
+   --grey-80: #636365;
+   --grey-90: #434345;
+   --grey-100: #1E1E20;
+
+   --cool-grey-10: #EEEFFF;
+   --cool-grey-20: #E4E5F5;
+   --cool-grey-30: #DDDEED;
+   --cool-grey-40: #D1D2E0;
+   --cool-grey-50: #B0B1BD;
+   --cool-grey-60: #8F8F99;
+   --cool-grey-70: #72737A;
+   --cool-grey-80: #56565C;
+   --cool-grey-90: #39393D;
+   --cool-grey-100: #131314;
+
+   /* standardized variables */
+   --standard-border-radius: 1rem;
+   --standard-margin: 0.6rem;
+   --standard-padding: 1.3rem 1.6rem;
+
+   --img-border-radius: 0.75rem;
+}
+
+/*  Base reset */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+   list-style: none;
+}
+
+/*  Base HTML & body */
+
+/* Typography */
+
+h1, h2, h3, h4, h5, h6 {
+   font-family: var(--font-family);
+   color: var(--secondary-100);
+}
+
+p {
+   font-family: var(--font-family);
+}
+
+/* Utilities */
+
+.site-wrapper {
+   display: grid;
+   grid-template-columns: 1fr 8fr;
+   height: 100vh;
+   padding: 0.6rem;
+}
+
+.right-wrapper {
+
+}
+
+/* Logotype CSS */
+.logotype {
+   display: flex;
+   align-content: center;
+   padding: var(--standard-padding);
+   gap: .7rem;
+
+   p {
+      color: var(--secondary-110);
+      font-size: 1.5em;
+      font-weight: 500;
+      line-height: 110%;
+   }
+}
+
+/* Navbar CSS */
+nav {
+   padding: var(--standard-padding);
+
+   font-family: var(--font-family);
+   color: var(--primary-100);
+
+   li {
+      display: flex;
+      gap: .8rem;
+   }
+}
+
+.nav-wrapper {
+   background-color: var(--cool-grey-10);
+   border-radius: var(--standard-border-radius);
+   margin-right: var(--standard-margin);
+}
+
+.right-wrapper {
+   display: flex;
+   flex-direction: column;
+}
+
+/* Header CSS */
+
+header {
+   display: flex;
+   padding: var(--standard-padding);
+   background-color: var(--grey-20);
+   margin-bottom: var(--standard-margin);
+   border-radius: var(--standard-border-radius);
+   
+   h1 {
+      color: var(--secondary-100);
+      font-size: 1.5rem;
+      line-height: 110%;
+      font-weight: 600;
+      }
+}
+
+/* Main CSS */
+
+main {
+   flex: 1;
+   display: flex;
+   justify-content: center;
+   align-content: center;
+   background-color: var(--grey-20);
+   border-radius: var(--standard-border-radius);
+   padding: var(--standard-padding);
+}
+
+.event-grid {
+   display: grid;
+   grid-template-columns: repeat(4, minmax(280px, 1fr));
+   gap: 1rem;
+}
+
+.event-card {
+   display: flex;
+   flex-direction: column;
+   gap: .6em;
+   max-width: 274px;
+   background-color: var(--grey-10);
+   padding: 0.6em;
+   border-radius: var(--standard-border-radius);
+
+   img {
+      border-radius: var(--img-border-radius);
+   }
+   
+   h2 {
+      color: var(--grey-100);
+      font-size: 1em;
+      font-weight: 600;
+      line-height: 120%;
+   }
+
+   .event-date-time-card {
+      color: var(--grey-70);
+      font-size: 0.68em;
+      font-weight: 400;
+      line-height: 124%;
+   }
+
+   .event-location-card {
+      display: flex;
+      gap: .4rem;
+      color: var(--grey-80);
+      font-size: 0.68em;
+      font-weight: 400;
+      line-height: 124%;
+   }
+
+   .event-price-card {
+      color: var(--primary-100);
+      font-size: 1.125em;
+      font-weight: 600;
+      line-height: 120%;
+   }
+}
+
+/* Footer CSS */
+footer {
+   background-color: var(--grey-20);
+   border-radius: var(--standard-border-radius);
+   margin-top: var(--standard-margin);
+   padding: var(--standard-padding);
+
+   p {
+      font-family: var(--font-family);
+      color: var(--grey-70);
+      font-size: 0.75em;
+      line-height: 130%;
+      font-weight: 600;
+   }
+}

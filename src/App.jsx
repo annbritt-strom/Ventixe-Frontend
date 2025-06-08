@@ -7,6 +7,8 @@ function App() {
     <>
       <Routes>
         <Route path='/' element={<EventPage />} />
+        <Route path='/events/:id' element={<EventDetailsPage />} />
+        <Route path='/events/booking/:id' element={<BookingPage />} />
       </Routes>
     </>
   )
